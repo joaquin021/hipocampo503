@@ -161,31 +161,6 @@ The `dist/` folder contains the production-ready static site. You can deploy thi
 - **Vercel:** Connect your Git repository
 - **Any web server:** Upload `dist/` contents via FTP/SFTP
 
-## 📞 Contact Information
-
-- **Website:** [https://joaquin021.github.io/hipocampo503/](https://joaquin021.github.io/hipocampo503/)
-- **Email:** grupo@hipocampo503.es
-- **Phone:** 669 973 613 (WhatsApp/Telegram only)
-- **Location:** Centro De Ocio Y Artes Emergentes, 30740, San Pedro del Pinatar, Murcia
-- **Facebook:** [@hipocampo503](https://www.facebook.com/hipocampo503)
-- **Instagram:** [@hipocampo503](https://www.instagram.com/hipocampo503)
-
-## 🏕️ About Grupo Scout Hipocampo 503
-
-We are a scout group in San Pedro del Pinatar, Murcia, part of ASDE (Scouts de España) and Exploradores de Murcia. We provide values-based education for children and youth aged 8-17 years through:
-
-- **Educational Stages:**
-  - Lobatos (Cubs) - 8-11 years
-  - Scouts (Troop) - 11-14 years
-  - Escultas (Rovers) - 14-17 years
-
-- **Activities:**
-  - Monthly camping trips
-  - Weekly Saturday meetings
-  - Nature excursions
-  - Community service projects
-  - Special events and celebrations
-
 ## 📄 License
 
 This project is private and belongs to Grupo Scout Hipocampo 503. All rights reserved.
