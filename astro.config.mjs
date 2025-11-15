@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://joaquin021.github.io',
-  base: '/hipocampo503',
+  site: 'https://prueba.hipocampo503.es',
+  base: '/',
 });

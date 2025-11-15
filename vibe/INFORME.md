@@ -325,6 +325,9 @@ Tarjeta con gradiente morado que incluye:
   - Instrucciones de despliegue detalladas
   - Información del proyecto y contacto
 - ✅ Actualizado vibe/INFORME.md con información de despliegue
+- ✅ Corregidas rutas de assets (logo y favicon) para GitHub Pages
+  - Uso de `import.meta.env.BASE_URL` en rutas
+- ✅ Desplegado exitosamente en GitHub Pages
 
 ---
 
