@@ -1,0 +1,233 @@
+---
+// Header con navegación responsive
+---
+
+<header class="header">
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo-link">
+        <img src="/logo.webp" alt="G.S. Hipocampo 503" class="logo" />
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
+        <li><a href="#que-hacemos" class="nav-link">Qué Hacemos</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/hipocampo503" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/hipocampo503" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  menuToggle?.addEventListener('click', () => {
+    navMenu?.classList.toggle('active');
+    menuToggle?.classList.toggle('active');
+  });
+
+  // Close menu when clicking on a link
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu?.classList.remove('active');
+      menuToggle?.classList.remove('active');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest('.navbar')) {
+      navMenu?.classList.remove('active');
+      menuToggle?.classList.remove('active');
+    }
+  });
+</script>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+  }
+
+  .navbar {
+    padding: var(--spacing-sm) 0;
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+  }
+
+  .logo-link {
+    flex-shrink: 0;
+  }
+
+  .logo {
+    height: 50px;
+    width: auto;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    z-index: 1001;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 3px;
+    transition: all var(--transition-fast);
+  }
+
+  .hamburger {
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .hamburger::before {
+    top: -8px;
+  }
+
+  .hamburger::after {
+    top: 8px;
+  }
+
+  .menu-toggle.active .hamburger {
+    background-color: transparent;
+  }
+
+  .menu-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-lg);
+    margin: 0;
+  }
+
+  .nav-link {
+    color: var(--color-dark-gray);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+    padding: var(--spacing-xs) 0;
+  }
+
+  .nav-link:hover {
+    color: var(--color-primary);
+  }
+
+  .social-links {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+
+  .social-icon {
+    color: var(--color-gray);
+    transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+  }
+
+  .social-icon:hover {
+    color: var(--color-primary);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .logo {
+      height: 40px;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background-color: var(--color-white);
+      padding: var(--spacing-md);
+      gap: var(--spacing-sm);
+      box-shadow: var(--shadow-lg);
+      transform: translateX(-100%);
+      opacity: 0;
+      transition: all var(--transition-normal);
+    }
+
+    .nav-menu.active {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .nav-link {
+      padding: var(--spacing-sm);
+      display: block;
+    }
+
+    .social-links {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      height: 35px;
+    }
+  }
+</style>

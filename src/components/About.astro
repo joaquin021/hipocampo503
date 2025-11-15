@@ -1,0 +1,334 @@
+---
+// Sección Quiénes Somos
+---
+
+<section id="quienes-somos" class="section about">
+  <div class="container">
+    <h2 class="section-title">Quiénes Somos</h2>
+
+    <div class="about-intro">
+      <p class="lead-text">
+        Somos un <strong>movimiento educativo presente en todo el mundo</strong> al que pertenecen
+        más de 40 millones de personas, jóvenes y adultos, en más de 1 millón de grupos de scouts,
+        compartiendo un mismo sistema de valores y el deseo de construir un mundo mejor.
+      </p>
+      <p class="lead-text-secondary">
+        El <strong>Grupo Scout Hipocampo 503</strong> está ubicado en San Pedro del Pinatar, Murcia,
+        y formamos parte de <strong>ASDE y Exploradores de Murcia</strong>.
+      </p>
+    </div>
+
+    <div class="vision-mission">
+      <div class="vm-card vision-card">
+        <div class="vm-icon">
+          <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </div>
+        <h3 class="vm-title">Visión</h3>
+        <p class="vm-text">
+          Creemos que la educación lo es todo y por ello contribuimos a la creación de un mundo
+          mejor, más justo y solidario, donde el cuidado del Medio Ambiente, el respeto a los
+          derechos humanos y el entendimiento entre las personas y los pueblos sea una realidad,
+          como movimiento global.
+        </p>
+      </div>
+
+      <div class="vm-card mission-card">
+        <div class="vm-icon">
+          <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h3 class="vm-title">Misión</h3>
+        <p class="vm-text">
+          La misión del Escultismo es contribuir a la educación y al desarrollo de las personas,
+          principalmente durante la infancia, adolescencia y juventud, a través de un sistema de
+          valores basado en la Promesa y la Ley Scout, para ayudar a crear un mundo mejor donde
+          las personas puedan desarrollarse como individuos autónomos y jugar un papel constructivo
+          y activo en la sociedad.
+        </p>
+      </div>
+    </div>
+
+    <div class="objectives-section">
+      <h3 class="objectives-title">Para alcanzar esta misión consideramos fundamental:</h3>
+      <div class="objectives-grid">
+        <div class="objective-card">
+          <div class="objective-number">1</div>
+          <p class="objective-text">
+            <strong>Educar en la libertad, la justicia, la autonomía, la solidaridad y la responsabilidad</strong>
+            personal y comunitaria, en el marco de la convivencia, el respeto y el servicio.
+          </p>
+        </div>
+
+        <div class="objective-card">
+          <div class="objective-number">2</div>
+          <p class="objective-text">
+            <strong>Ayudarles a establecer un sistema de valores</strong> basado en principios
+            espirituales, sociales y personales, inherentes a la persona, que ayuden a superar el
+            individualismo y el materialismo, y favorezca la formación de su personalidad.
+          </p>
+        </div>
+
+        <div class="objective-card">
+          <div class="objective-number">3</div>
+          <p class="objective-text">
+            <strong>Despertar el espíritu crítico, transformador y participativo</strong>, respetando
+            la libertad personal y promoviendo hábitos de vida saludable, que permitan analizar las
+            ideologías y opciones que la sociedad presenta para posteriormente elegir una opción de vida.
+          </p>
+        </div>
+
+        <div class="objective-card">
+          <div class="objective-number">4</div>
+          <p class="objective-text">
+            <strong>Impulsar la comprensión y el desarrollo en nuestra sociedad</strong>, promoviendo
+            el cuidado y defensa del Medio Ambiente y estimulando acciones de cooperación, servicio
+            y voluntariado hacia los demás.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-footer">
+      <p class="footer-text">
+        Nuestro nombre, <em>Hipocampo</em>, hace referencia al caballito de mar, un animal
+        muy presente en nuestro entorno natural del Mar Menor. Este símbolo representa nuestra
+        conexión con la naturaleza y nuestro compromiso con la conservación del medio ambiente.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background-color: var(--color-white);
+  }
+
+  .about-intro {
+    max-width: 900px;
+    margin: 0 auto var(--spacing-xxl);
+    text-align: center;
+  }
+
+  .lead-text {
+    font-size: var(--font-size-large);
+    line-height: 1.8;
+    color: var(--color-gray);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .lead-text-secondary {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-gray);
+    margin-top: var(--spacing-md);
+  }
+
+  /* Visión y Misión */
+  .vision-mission {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  .vm-card {
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vm-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .vision-card {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+  }
+
+  .mission-card {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    color: var(--color-white);
+  }
+
+  .vm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .vm-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius-full);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .vm-title {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-white);
+  }
+
+  .vm-text {
+    line-height: 1.8;
+    opacity: 0.95;
+  }
+
+  /* Objetivos */
+  .objectives-section {
+    max-width: 1100px;
+    margin: 0 auto var(--spacing-xxl);
+  }
+
+  .objectives-title {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.4;
+  }
+
+  .objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .objective-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background-color: var(--color-light-gray);
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-normal);
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .objective-card:hover {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    transform: translateX(5px);
+  }
+
+  .objective-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: var(--font-size-large);
+  }
+
+  .objective-text {
+    color: var(--color-gray);
+    line-height: 1.7;
+  }
+
+  .objective-text strong {
+    color: var(--color-dark-gray);
+  }
+
+  /* Footer */
+  .about-footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    text-align: center;
+    background-color: var(--color-light-gray);
+    border-radius: var(--border-radius-lg);
+  }
+
+  .footer-text {
+    color: var(--color-gray);
+    line-height: 1.8;
+    font-size: var(--font-size-base);
+  }
+
+  .footer-text em {
+    color: var(--color-primary);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .vision-mission {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+
+    .objectives-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+
+    .vm-card {
+      padding: var(--spacing-lg);
+    }
+
+    .objective-card {
+      padding: var(--spacing-md);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .lead-text {
+      font-size: var(--font-size-base);
+    }
+
+    .vm-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .vm-icon svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    .vm-title {
+      font-size: var(--font-size-xl);
+    }
+
+    .objectives-title {
+      font-size: var(--font-size-large);
+    }
+
+    .objective-number {
+      width: 35px;
+      height: 35px;
+      font-size: var(--font-size-base);
+    }
+
+    .objective-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+</style>
